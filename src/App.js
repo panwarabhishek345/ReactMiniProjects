@@ -1,38 +1,36 @@
 import React, { Component } from 'react'
-import Coin from './Coin';
+import NumberItem from './NumberItem';
 import './App.css';
 
 class App extends Component{
     constructor(props){
         super(props);
         this.state = {
-            total:0,
-            head:0,
-            faceHead:true
+           nums:[1,2,3,4,5]
         }
-        this.flipCoin = this.flipCoin.bind(this);
+        this.remove = this.remove.bind(this);
     }
 
-    flipCoin(e){
-        const num = Math.floor(Math.random()*2);
-        console.log(num);
-        const head = num == 0?1:0;
+    remove(num){
         this.setState(st => {
             return {
-                total:st.total+1,
-                head: st.head+head,
-                faceHead:head == 1
+                nums:st.nums.filter(n => n !== num)
             };
-        })
+        });
     }
 
-
     render(){
+        let list;
+        if(this.state.nums.length > 0)
+            list = this.state.nums.map(n => <NumberItem key={n} value={n} remove={this.remove}/>);
+        else
+            list = <h3>No items in the list</h3>;
         return (
             <div className="App">
-               <Coin head={this.state.faceHead}/>
-                <h1>You got {this.state.head} heads out of {this.state.total} trials</h1>
-                <button onClick={this.flipCoin}>Flip coin</button>
+                <h1>Number List</h1>
+                <div>
+                    {list}
+                </div>   
             </div>
         );
     }
