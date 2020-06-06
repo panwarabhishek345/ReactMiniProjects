@@ -1,0 +1,11 @@
+.Deck{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.Deck-cards{
+    position: relative;
+    padding:20px;
+}
