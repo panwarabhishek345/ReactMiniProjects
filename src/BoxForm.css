@@ -1,0 +1,18 @@
+.BoxForm{
+    width: 20em;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BoxForm input {
+    margin: 5px;
+}
+
+.BoxForm label {
+    margin: 5px;
+}
+
+.BoxForm button {
+    width: 100px;
+}
