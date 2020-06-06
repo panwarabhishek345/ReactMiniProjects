@@ -1,0 +1,18 @@
+.Board {
+
+}
+
+.Board-container {
+    display: flex;
+    flex-direction: column;
+    border: black solid 2px;
+    height: fit-content;
+    box-shadow: 5px 5px 5px rgb(129, 129, 129);
+    border-radius: 5px;
+    background-color: black;
+}
+
+.Board-row{
+    display: flex;
+    flex-direction: row;
+}

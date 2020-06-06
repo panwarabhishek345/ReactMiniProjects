@@ -1,0 +1,15 @@
+.Cell{
+    width: 80px;
+    height: 80px;  
+    border: black solid 1px;  
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Cell-light{
+    background-color: aqua;
+}
+
+.Cell-dark{
+    background-color: rgb(0, 48, 48);
+}
