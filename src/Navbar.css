@@ -1,0 +1,16 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: rgb(47, 49, 71);
+}
+
+.Navbar a {
+    padding: 10px;
+    color: rgb(138, 143, 202);
+}
+
+.Navbar .Navbar-active{
+    color: white;
+}
